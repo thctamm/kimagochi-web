@@ -1,0 +1,66 @@
+@import '../../common/common';
+
+.kim {
+  font-size: 22px;
+  background-color: $flagRed;
+  color: $lightTextColor;
+    
+  .kim-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 600px;
+  }
+  
+  .kim-img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 100%;
+  }
+
+  .add-on {
+    margin-top: -530px;
+  }
+
+  .stats {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    display:block;
+    margin: auto;
+    width: 1000px;
+    padding: 30px;
+  }
+
+  .stat {
+    width: 900px;
+  }
+
+  .prog-box {
+    text-align: center;
+    height: 25px;
+  }
+
+  .actions {
+    font-size: 40px;
+    display:block;
+    margin:auto;
+    width: 1000px;
+    padding: 30px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .events {
+    display:block;
+    margin:auto;
+    padding: 30px;
+    width: 1000px;
+
+    h1 {
+      text-align: center;
+    }
+    
+  }
+}

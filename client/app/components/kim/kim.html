@@ -1,0 +1,98 @@
+<div class="kim">
+    <div class="kim-box">
+        <img src="./assets/kim.png" class="kim-img"></img>
+        <img ng-show="$ctrl.happiness >= 70" src="./assets/kim_happy.png" class="kim-img add-on"></img>
+        <img ng-show="$ctrl.happiness <= 30" src="./assets/kim_angry.png" class="kim-img add-on"></img>
+        <img ng-show="$ctrl.happiness > 30 && $ctrl.happiness < 70" src="./assets/kim_neutral.png" class="kim-img add-on"></img>
+    </div>
+    <div style="padding:30px">
+        <div class="stats">
+            <div class="stat">
+                <div class="row">
+                    <div class="col-md-3">Happiness: </div>
+                    <div class="col-md-9">
+                        <div class="progress prog-box">
+                            <div ng-class="$ctrl.happiness > 60 ? 'progress-bar-success' : ($ctrl.happiness > 40 ? 'progress-bar-warning' : 'progress-bar-danger')" role="progressbar" aria-valuenow="{{ $ctrl.happiness }}" 
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{ $ctrl.happiness }}%">
+                                 {{ $ctrl.happiness }}
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="row">
+                    <div class="col-md-3">Hunger: </div>
+                    <div class="col-md-9">
+                        <div class="progress prog-box">
+                             <div ng-class="$ctrl.hunger > 60 ? 'progress-bar-danger' : ($ctrl.hunger > 40 ? 'progress-bar-warning' : 'progress-bar-success')" role="progressbar" aria-valuenow="{{ $ctrl.hunger }}" 
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{ $ctrl.hunger }}%">
+                                 {{ $ctrl.hunger }}
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="row">
+                    <div class="col-md-3">Prestige: </div>
+                    <div class="col-md-9">
+                        <div class="progress prog-box">
+                             <div ng-class="$ctrl.prestige > 60 ? 'progress-bar-success' : ($ctrl.prestige > 40 ? 'progress-bar-warning' : 'progress-bar-danger')" role="progressbar" aria-valuenow="{{ $ctrl.prestige }}" 
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{ $ctrl.prestige }}%">
+                                 {{ $ctrl.prestige }}
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="row">
+                    <div class="col-md-3">Boredom: </div>
+                    <div class="col-md-9">
+                        <div class="progress prog-box">
+                             <div ng-class="$ctrl.boredom > 60 ? 'progress-bar-danger' : ($ctrl.boredom > 40 ? 'progress-bar-warning' : 'progress-bar-success')" role="progressbar" aria-valuenow="{{ $ctrl.boredom }}" 
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{ $ctrl.boredom }}%">
+                                 {{ $ctrl.boredom }}
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="row">
+                    <div class="col-md-3">Cash: </div>
+                    <div class="col-md-9">
+                        ₩{{ $ctrl.cash }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <div class="row">
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-info btn-lg">Eat</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-info btn-lg">Visit a factory</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-info btn-lg">Play with Rockets</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-info btn-lg">Hold parade (₩300)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="events">
+            <div class="row">
+                <h1>Events</h1>
+            </div>
+            <div ng-repeat="event in $ctrl.events" class="row">
+                <p>{{event}}</p>
+            </div>
+        </div>
+    </div>
+</div>
