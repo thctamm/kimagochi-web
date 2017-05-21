@@ -1,3 +1,3 @@
-web: npm install; node myapp.js
+web: node myapp.js
 heroku ps:scale web=1
 
