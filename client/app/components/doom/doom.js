@@ -1,8 +1,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import kimComponent from './kim.component';
+import doomComponent from './doom.component';
 
-let kimModule = angular.module('kim', [
+let doomModule = angular.module('doom', [
   uiRouter
 ])
 
@@ -12,16 +12,14 @@ let kimModule = angular.module('kim', [
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('kim', {
-      url: '/kim',
-      component: 'kim',
-      params: {id: 0}
+    .state('doom', {
+      url: '/doom',
+      component: 'doom'
     });
 })
 
-
-.component('kim', kimComponent)
+.component('doom', doomComponent)
 
 .name;
 
-export default kimModule;
+export default doomModule;

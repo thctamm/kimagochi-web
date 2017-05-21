@@ -1,3 +1,36 @@
 <div class="home">
+    <div class="logins">
+        <div ng-show="$ctrl.fail" class="row">
+            <div class="col-md-12">
+                <h1>Invalid ID </h1>
+            </div>
+        </div>
+        <p style='padding-left:10px'>Login</p>
+		<div class="row">
+			<div class="col-md-4">your kim id: </div>
+			<div class="col-md-8 inp">
+				<input type="text" ng-model="$ctrl.id"> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<button type="button" ng-click="$ctrl.login()" class="btn btn-primary">Login</button> 
+			</div>
+        </div>
+        <div class="row">
+            <p style='padding-left:15px'>Or create a new Kim</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Phone number: </div>
+			<div class="col-md-8 inp">
+				<input type="text" ng-model="$ctrl.number"> 
+			</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" ng-click="$ctrl.newKim()" class="btn btn-default">New</button>
+            </div>
+		</div>
+	</div>
 
 </div>

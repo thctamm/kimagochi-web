@@ -1,8 +1,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import kimComponent from './kim.component';
+import eatComponent from './eat.component';
 
-let kimModule = angular.module('kim', [
+let eatModule = angular.module('eat', [
   uiRouter
 ])
 
@@ -12,16 +12,14 @@ let kimModule = angular.module('kim', [
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('kim', {
-      url: '/kim',
-      component: 'kim',
+    .state('eat', {
+      url: '/eat',
+      component: 'eat',
       params: {id: 0}
     });
 })
-
-
-.component('kim', kimComponent)
+.component('eat', eatComponent)
 
 .name;
 
-export default kimModule;
+export default eatModule;

@@ -1,0 +1,37 @@
+@import '../../common/common';
+
+.factory {
+  font-size: 22px;
+  background-color: $flagRed;
+  color: $lightTextColor;
+
+  .img-box {
+    padding-top: 30px;
+    height: 550px;
+  }
+
+  .kim-img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 100%;
+  }
+
+  .message {
+    display:block;
+    margin:auto;
+    padding: 30px;
+    width: 1000px;
+
+    h2 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+  }
+
+}

@@ -1,11 +1,18 @@
 <div class="kim">
+    <div class="id-box">
+        <h1>ID: {{$ctrl.id}}</h1>Save this. You need it to come back. 
+    </div>
     <div class="kim-box">
         <img src="./assets/kim.png" class="kim-img"></img>
         <img ng-show="$ctrl.happiness >= 70" src="./assets/kim_happy.png" class="kim-img add-on"></img>
         <img ng-show="$ctrl.happiness <= 30" src="./assets/kim_angry.png" class="kim-img add-on"></img>
         <img ng-show="$ctrl.happiness > 30 && $ctrl.happiness < 70" src="./assets/kim_neutral.png" class="kim-img add-on"></img>
+        <img ng-show="$ctrl.hunger >= 60" src="./assets/kim_hungry.png" class="kim-img add-on"></img>
+        <img ng-show="$ctrl.prestige >= 50" src="./assets/kim_good_flag.png" class="kim-img add-on"></img>
+        <img ng-show="$ctrl.prestige < 50" src="./assets/kim_bad_flag.png" class="kim-img add-on"></img>
+        <img ng-show="$ctrl.boredom >= 50" src="./assets/kim_bored.png" class="kim-img add-on"></img>
     </div>
-    <div style="padding:30px">
+    <div style="padding:5px">
         <div class="stats">
             <div class="stat">
                 <div class="row">
@@ -72,16 +79,16 @@
         <div class="actions">
             <div class="row">
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-info btn-lg">Eat</button>
+                    <button type="button" class="btn btn-info btn-lg" ng-click="$ctrl.eat()">Eat</button>
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-info btn-lg">Visit a factory</button>
+                    <button type="button" class="btn btn-info btn-lg" ng-click="$ctrl.factory()">Visit a factory</button>
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-info btn-lg">Play with Rockets</button>
+                    <button type="button" class="btn btn-info btn-lg" ng-click="$ctrl.rockets()">Play with Rockets</button>
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-info btn-lg">Hold parade (₩300)</button>
+                    <button type="button" class="btn btn-info btn-lg" ng-click="$ctrl.parade()">Hold parade (₩300)</button>
                 </div>
             </div>
         </div>
@@ -90,8 +97,10 @@
             <div class="row">
                 <h1>Events</h1>
             </div>
-            <div ng-repeat="event in $ctrl.events" class="row">
-                <p>{{event}}</p>
+            <div ng-repeat="event in $ctrl.events track by $index" class="row event-box">
+                <div class="event-txt">
+                    <p>{{event}}</p>
+                </div>
             </div>
         </div>
     </div>

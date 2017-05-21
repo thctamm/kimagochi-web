@@ -1,5 +1,31 @@
 @import '../../common/common';
 
 .home {
+    font-size: 22px;
+	background-color: $flagRed;
+	color: $lightTextColor;
 
+	.logins {
+		padding: 30px;
+		display: block;
+		margin: auto;
+		width: 600px;
+
+        h1 {
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .inp {
+            color: black;
+        }
+
+        .row {
+            padding: 10px;
+        }
+	}
 }

@@ -6,9 +6,19 @@
   color: $lightTextColor;
     
   .kim-box {
-    padding-top: 30px;
     padding-bottom: 30px;
-    height: 600px;
+    height: 550px;
+  }
+
+  .id-box {
+    padding: 1px 30px 0px 0px;
+    text-align: right;
+    margin-bottom: -100px;
+
+    h1 {
+      margin-bottom: 5px;
+      font-size: 30px;
+    }
   }
   
   .kim-img {
@@ -19,7 +29,7 @@
   }
 
   .add-on {
-    margin-top: -530px;
+    margin-top: -510px;
   }
 
   .stats {
@@ -28,7 +38,7 @@
     display:block;
     margin: auto;
     width: 1000px;
-    padding: 30px;
+    padding: 20px;
   }
 
   .stat {
@@ -45,7 +55,7 @@
     display:block;
     margin:auto;
     width: 1000px;
-    padding: 30px;
+    padding: 20px;
 
     .btn {
       width: 100%;
@@ -55,11 +65,21 @@
   .events {
     display:block;
     margin:auto;
-    padding: 30px;
+    padding-bottom: 20px;
     width: 1000px;
 
     h1 {
       text-align: center;
+    }
+
+    .event-box {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      margin:10px;
+    }
+
+    .event-txt {
+      padding: 10px;
     }
     
   }
