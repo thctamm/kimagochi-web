@@ -1,3 +1,3 @@
-web: npm start build; node myapp.js
+web: npm install; npm start build; node myapp.js
 heroku ps:scale web=1
 
