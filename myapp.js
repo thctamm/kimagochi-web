@@ -29,6 +29,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 app.use(methodOverride('X-HTTP-Method-Override'));
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'https://kimagochi-back.herokuapp.com/');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/dist'));
 
